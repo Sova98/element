@@ -229,11 +229,21 @@
       },
 
       leftLabel() {
-        return this.leftDate.getFullYear() + ' ' + this.t('el.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.leftDate.getMonth() + 1 }`);
+        if(this.withoutYear){
+          return this.t(`el.datepicker.month${ this.leftDate.getMonth() + 1 }`);
+        }else{
+            //gfg
+          return this.leftDate.getFullYear() + ' ' + this.t('el.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.leftDate.getMonth() + 1 }`);
+        }
       },
 
       rightLabel() {
-        return this.rightDate.getFullYear() + ' ' + this.t('el.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.rightDate.getMonth() + 1 }`);
+        if(this.withoutYear){
+          return this.t(`el.datepicker.month${ this.rightDate.getMonth() + 1 }`);
+        }else{
+          return this.rightDate.getFullYear() + ' ' + this.t('el.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.rightDate.getMonth() + 1 }`);
+        }
+
       },
 
       leftYear() {
@@ -317,6 +327,7 @@
         value: [],
         defaultValue: null,
         defaultTime: null,
+        withoutYear: false,
         minDate: '',
         maxDate: '',
         leftDate: new Date(),

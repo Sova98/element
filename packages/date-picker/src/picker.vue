@@ -345,6 +345,10 @@ export default {
   props: {
     size: String,
     format: String,
+    withoutYear: {
+        type: Boolean,
+        default: false
+    },
     valueFormat: String,
     readonly: Boolean,
     placeholder: String,
@@ -824,6 +828,7 @@ export default {
       this.picker = new Vue(this.panel).$mount();
       this.picker.defaultValue = this.defaultValue;
       this.picker.defaultTime = this.defaultTime;
+      this.picker.withoutYear = this.withoutYear;
       this.picker.popperClass = this.popperClass;
       this.popperElm = this.picker.$el;
       this.picker.width = this.reference.getBoundingClientRect().width;
