@@ -346,8 +346,8 @@ export default {
     size: String,
     format: String,
     withoutYear: {
-        type: Boolean,
-        default: false
+      type: Boolean,
+      default: false
     },
     valueFormat: String,
     readonly: Boolean,

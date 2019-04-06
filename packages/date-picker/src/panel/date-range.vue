@@ -229,21 +229,19 @@
       },
 
       leftLabel() {
-        if(this.withoutYear){
+        if (this.withoutYear) {
           return this.t(`el.datepicker.month${ this.leftDate.getMonth() + 1 }`);
-        }else{
-            //gfg
+        } else {
           return this.leftDate.getFullYear() + ' ' + this.t('el.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.leftDate.getMonth() + 1 }`);
         }
       },
 
       rightLabel() {
-        if(this.withoutYear){
+        if (this.withoutYear) {
           return this.t(`el.datepicker.month${ this.rightDate.getMonth() + 1 }`);
-        }else{
+        } else {
           return this.rightDate.getFullYear() + ' ' + this.t('el.datepicker.year') + ' ' + this.t(`el.datepicker.month${ this.rightDate.getMonth() + 1 }`);
         }
-
       },
 
       leftYear() {
